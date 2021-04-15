@@ -1,7 +1,7 @@
 <p align="center">
   <img alt="Gopher" src="logo.svg" height="250" />
-  <h3 align="center">Go Mail</h3>
-  <p align="center">A cross platform mail driver for GoLang.</p>
+  <h3 align="center">Go Recovery</h3>
+  <p align="center">An beautiful recovery middleware go GoLang..</p>
   <p align="center">
     <a href="https://travis-ci.com/ainsleyclark/go-mail"><img alt="Travis" src="https://www.travis-ci.com/ainsleyclark/go-mail.svg?branch=main"></a>
     <a href="/LICENSE.md"><img alt="Software License" src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square"></a>
@@ -12,9 +12,6 @@
 </p>
 
 ## Introduction
-
-Go Mail aims to unify multiple popular mail API's (SparkPost, MailGun, SendGrid & SMTP) into a singular easy to use interface. Email sending is seriously simple and great for allowing the developer to 
-choose what platform they use. 
 
 ## Todo
 

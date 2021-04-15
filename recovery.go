@@ -14,7 +14,6 @@
 package recovery
 
 import (
-	"fmt"
 	"net"
 	"net/http"
 	"os"
@@ -58,11 +57,15 @@ func (h *Handler) Recover(cfg Config) []byte {
 
 	tpl, err := r.Tpl()
 	if err != nil {
-		fmt.Println(err)
 		return nil
 	}
 
 	return tpl
+}
+
+
+func Static(w http.ResponseWriter, r *http.Request) {
+	http.Handle("/static", http.FileServer(http.Dir("./static/")))
 }
 
 // HTTPRecovery hello

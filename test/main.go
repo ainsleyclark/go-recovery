@@ -26,7 +26,9 @@ const (
 
 func main() {
 	http.HandleFunc("/", handler)
+	http.HandleFunc("/static", recovery.Static)
 	err := http.ListenAndServe(Port, nil)
+
 	if err != nil {
 		return
 	}

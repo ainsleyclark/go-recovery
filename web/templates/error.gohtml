@@ -1,0 +1,27 @@
+{{ define "content" }}
+
+    <!-- =====================
+        Main Error
+        ===================== -->
+    <section class="error error-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Main Error Card -->
+                    <div class="card">
+                        <!-- Card Header -->
+                        <div class="card-header">
+                            <small>Here</small>
+                        </div>
+                        <!-- Card Body -->
+                        <div class="card-body">
+                            <h2 class="error-message">{{ .Error }}</h2>
+                            <a href="{{ .Request.Url }}" target="_blank"><small>{{ .Request.Url }}</small></a>
+                        </div>
+                    </div><!-- /Main Error Card -->
+                </div><!-- /Col -->
+            </div><!-- /Row -->
+        </div><!-- /Container -->
+    </section>
+
+{{ end }}

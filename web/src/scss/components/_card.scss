@@ -1,0 +1,124 @@
+// -----------------------------------------------------------------------------
+// _card.scss
+// This file contains all styles related to the card component.
+// -----------------------------------------------------------------------------
+
+// Variables
+$card-padding-mob: 2rem;
+$card-padding-tab: 2rem;
+$card-padding-desk: 3rem;
+
+.card {
+	$self: &;
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	background-color: $white;
+	width: 100%;
+	padding: 0;
+	border: 1px solid rgba($grey, 0.4);
+	box-shadow: 0 1px 6px 0 $grey-light;
+	border-radius: 4px;
+	margin-bottom: 0;
+
+	// Props
+	// =========================================================================
+
+	* {
+		text-align: left;
+	}
+
+	&-cont {
+		width: 100%;
+		max-width: 320px;
+	}
+
+	// Header
+	// =========================================================================
+
+	&-header {
+		padding: 16px $card-padding-mob;
+		border-bottom: 1px solid $grey-light;
+		width: 100%;
+	}
+
+	// Body
+	// =========================================================================
+
+	&-body {
+		padding: $card-padding-mob;
+	}
+
+	// Title
+	// =========================================================================
+
+	&-title {
+		margin-bottom: 1rem !important;
+		line-height: 1.3;
+	}
+
+	// Subtitle
+	// =========================================================================
+
+	&-subtitle {
+		margin-bottom: 12px;
+		line-height: 1.3;
+		color: $orange;
+	}
+
+	// Text
+	// =========================================================================
+
+	&-text {
+		margin-bottom: 0;
+	}
+
+	// Small
+	// =========================================================================
+
+	&-small {
+		border-radius: 10px;
+		padding: 16px 30px;
+		margin-bottom: 1rem;
+
+		h4 {
+			margin-bottom: 0;
+			line-height: 1;
+		}
+
+		#{$self}-subtitle {
+			display: inline-block;
+			margin: 0 6px 0 0;
+			color: $green;
+		}
+	}
+
+	// Tablet
+	// =========================================================================
+
+	@include media-tab {
+
+		&-header {
+			padding: 10px $card-padding-tab;
+		}
+
+		&-body {
+			padding: $card-padding-tab;
+		}
+	}
+
+	// Desktop
+	// =========================================================================
+
+	@include media-desk {
+
+		&-header {
+			padding: 10px $card-padding-desk;
+		}
+
+		&-body {
+			padding: $card-padding-desk;
+		}
+	}
+}

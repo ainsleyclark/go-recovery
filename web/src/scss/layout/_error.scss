@@ -1,0 +1,76 @@
+// -----------------------------------------------------------------------------
+// _error.scss
+// This file contains all styles related to the error
+// -----------------------------------------------------------------------------
+
+// Variables
+$error-padding-mob: 36px;
+$error-padding-tab: 50px;
+$error-padding-desk: 50px;
+
+.error {
+	position: relative;
+	width: 100vw;
+	max-width: 1200px !important;
+	margin: 0 auto;
+	//padding: 60px 0;
+
+	// Props
+	// ==========================================================================
+
+	h2 {
+		margin-bottom: 1rem;
+	}
+
+	&-code {
+		color: $secondary;
+		font-weight: 500;
+		margin-bottom: 6px !important;
+	}
+
+	// Main
+	// ==========================================================================
+
+	&-main {
+		padding: $error-padding-mob 0;
+	}
+
+	// Main
+	// ==========================================================================
+
+	&-info {
+		padding-bottom: $error-padding-mob;
+
+		&-card {
+			margin-top: 0;
+		}
+	}
+
+	// Tablet
+	// =========================================================================
+
+	@include media-tab {
+
+		&-main {
+			padding: $error-padding-tab 0;
+		}
+
+		&-info {
+			padding-bottom: $error-padding-tab;
+		}
+	}
+
+	// Desktop
+	// =========================================================================
+
+	@include media-desk {
+
+		&-main {
+			padding: $error-padding-desk 0;
+		}
+
+		&-info {
+			padding-bottom: $error-padding-desk;
+		}
+	}
+}
